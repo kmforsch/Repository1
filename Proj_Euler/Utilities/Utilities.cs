@@ -143,11 +143,7 @@ namespace Utilities
             }
             catch (Exception exc)
             {
-                System.Diagnostics.EventLog log = new System.Diagnostics.EventLog();
-                System.Diagnostics.EventLog.CreateEventSource("MySource", "MyNewLog");
-                Console.WriteLine("CreateEventSource");
-                Console.WriteLine(exc);
-                Console.ReadLine();
+                
             }
             Console.WriteLine("default: " + defaultValue);//
             return defaultValue;
