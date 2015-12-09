@@ -19,11 +19,8 @@ namespace Utilities
                     return isPrimeVar = false;
                 }
             }
-            //if (i == number1)
-            //{
-            //    if you get this far and the number is divisible by itself then return true
             isPrimeVar = true;
-            //}
+
             return isPrimeVar;
 
         }
@@ -47,10 +44,8 @@ namespace Utilities
                 {
                     //keep incrementing number of prime numbers
                     counter = counter + 1;
-                    Console.WriteLine(i + " counter: " + counter);
                 }
             }
-            Console.ReadLine();
         }
 
 
@@ -128,28 +123,18 @@ namespace Utilities
 
         }
 
-        public static int GetInt(int defaultValue)
+        public static int GetInt(double valueIn)
         {
-            try
-            {
-                string appKeyString = "";
-
-                if (appKeyString != null)
-                {
-
-                    Console.WriteLine("Int32: " + Int32.Parse(appKeyString));
-                    return Int32.Parse(appKeyString);
-                }
-            }
-            catch (Exception exc)
-            {
-                
-            }
-            Console.WriteLine("default: " + defaultValue);//
-            return defaultValue;
+            int valueOut = Convert.ToInt32(valueIn);
+            return valueOut;
         }
 
-
+        public static Boolean IsInt(double valueIn)
+        {
+            return ((valueIn % 1) == 0);
+           
+        }
+        
 
     }
 }
